@@ -18642,16 +18642,7 @@ var datePicker = function (_EventEmitter) {
 						this._select(_value);
 					}
 				} else {
-					if (__WEBPACK_IMPORTED_MODULE_1__utils_type__["e" /* isString */](_value)) {
-						this.start = __WEBPACK_IMPORTED_MODULE_2_date_fns__["format"](new Date(_value), this.format, {
-							locale: this.locale
-						});
-						this.end = undefined;
-					}
-
-					if (__WEBPACK_IMPORTED_MODULE_1__utils_type__["d" /* isObject */](_value) || __WEBPACK_IMPORTED_MODULE_1__utils_type__["b" /* isDate */](_value)) {
-						this._select(_value);
-					}
+					this._select(_value);
 				}
 			} else {
 				var string = this.start && this._isValidDate(this.start) ? __WEBPACK_IMPORTED_MODULE_2_date_fns__["format"](this.start, this.format, {

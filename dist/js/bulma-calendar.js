@@ -18985,6 +18985,13 @@ var datePicker = function (_EventEmitter) {
 			var _this6 = this;
 
 			var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
+      if(date.split !== undefined){
+        var sw = date.split(".");
+        if(sw.length == 3){
+          date = sw[1] + '.' + sw[0] + '.' + sw[2];
+          arguments[0] = date;
+        }
+      }
 
 			this.snapshot();
 			date = __WEBPACK_IMPORTED_MODULE_1__utils_type__["b" /* isDate */](date) ? date : new Date(date);
